@@ -229,6 +229,11 @@ function PatternCard({ pattern: dp }: { pattern: DetectedPattern }) {
         >
           {signalLabel}
         </Badge>
+        {aligned && (
+          <Badge className="text-[9px] px-2 py-0 rounded-full border-0 bg-accent/20 text-accent">
+            ✓ Trend aligned
+          </Badge>
+        )}
         <div className="flex-1" />
         <SignificanceDots significance={p.significance} />
       </div>
