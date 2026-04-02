@@ -373,54 +373,29 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section id="why-us" className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-foreground">
-        {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+      <section id="why-us" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 section-glow relative bg-gradient-to-br from-accent/[0.06] via-primary/[0.04] to-background overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute top-10 right-0 w-56 h-56 rounded-full bg-accent/8 blur-3xl" />
+          <div className="absolute bottom-0 left-10 w-40 h-40 rounded-full bg-primary/6 blur-3xl" />
         </div>
+        <div className="max-w-7xl mx-auto text-center relative">
+          <p className="reveal text-sm font-semibold tracking-widest text-accent uppercase mb-3">Why Yorlad Eye Care</p>
+          <h2 className="reveal reveal-delay-1 text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            Why Patients <span className="gradient-text">Choose Us</span>
+          </h2>
+          <p className="reveal reveal-delay-2 text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
+            We've built every part of the experience around one goal: protecting and perfecting your vision.
+          </p>
 
-        <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-16 sm:mb-20">
-            <p className="reveal text-xs font-bold tracking-[0.3em] text-accent uppercase mb-5">Why Yorlad Eye Care</p>
-            <h2 className="reveal reveal-delay-1 text-3xl sm:text-5xl font-bold text-primary-foreground mb-5 leading-tight">
-              Why Patients{" "}
-              <span className="text-accent">Choose Us</span>
-            </h2>
-            <div className="reveal reveal-delay-2 w-16 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-6" />
-            <p className="reveal reveal-delay-2 text-primary-foreground/50 text-lg max-w-xl mx-auto leading-relaxed">
-              Every detail is designed around one goal — protecting and perfecting your vision.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/[0.06] rounded-3xl overflow-hidden reveal reveal-delay-3">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {whyChooseUs.map((item, i) => (
-              <div
-                key={item.title}
-                className="group relative bg-foreground p-8 sm:p-10 text-center transition-all duration-500 hover:bg-primary/20"
-              >
-                {/* Hover accent line */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-500" />
-
-                <div className="w-14 h-14 rounded-2xl bg-primary-foreground/[0.05] border border-primary-foreground/[0.08] flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/15 group-hover:border-accent/20 group-hover:scale-110 transition-all duration-500">
-                  <item.icon className="h-6 w-6 text-primary-foreground/40 group-hover:text-accent transition-colors duration-500" />
+              <div key={item.title} className={`reveal reveal-delay-${Math.min(i + 1, 4)} text-left glass-card rounded-2xl p-6 sm:p-8 hover-lift group`}>
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-accent/10 flex items-center justify-center mb-5 group-hover:from-primary/25 group-hover:to-accent/20 group-hover:scale-110 transition-all duration-300">
+                  <item.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-base font-bold text-primary-foreground mb-3 tracking-tight">{item.title}</h3>
-                <p className="text-sm text-primary-foreground/40 leading-relaxed group-hover:text-primary-foreground/60 transition-colors duration-500">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom stat bar */}
-          <div className="reveal reveal-delay-4 mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-            {[
-              { value: "10+", label: "Years of Excellence" },
-              { value: "4+", label: "HMO Partners" },
-              { value: "5★", label: "Google Rating" },
-            ].map((stat) => (
-              <div key={stat.label} className="flex items-center gap-3">
-                <span className="text-2xl sm:text-3xl font-bold text-accent">{stat.value}</span>
-                <span className="text-xs font-medium tracking-wider uppercase text-primary-foreground/30">{stat.label}</span>
+                <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
