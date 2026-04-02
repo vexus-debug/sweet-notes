@@ -510,12 +510,18 @@ const Index = () => {
       </section>
 
       {/* HMO Partners */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/[0.08] via-accent/[0.06] to-primary/[0.08]">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/[0.08] via-accent/[0.06] to-primary/[0.08]">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="reveal text-sm font-semibold tracking-widest text-accent uppercase mb-6">HMO Partners</p>
-          <div className="reveal reveal-delay-1 flex flex-wrap justify-center gap-6 sm:gap-10">
-            {["Leadway Health", "Reliance Health", "Clearline HMO", "Novo Health"].map((p) => (
-              <span key={p} className="text-lg font-medium text-muted-foreground/80 hover:text-primary transition-colors duration-300 px-4 py-2 rounded-xl hover:bg-background/50">{p}</span>
+          <p className="reveal text-sm font-semibold tracking-widest text-accent uppercase mb-6">Primary HMO Partners</p>
+          <div className="reveal reveal-delay-1 flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
+            {["Leadway Health", "Reliance Health", "AXA Mansard", "Bastion Health", "Clearline HMO", "THT HMO"].map((p) => (
+              <span key={p} className="text-base sm:text-lg font-semibold text-foreground/90 hover:text-primary transition-colors duration-300 px-4 py-2 rounded-xl hover:bg-background/50 border border-border/40">{p}</span>
+            ))}
+          </div>
+          <p className="reveal reveal-delay-2 text-sm font-semibold tracking-widest text-accent uppercase mb-6">Other Accepted HMOs</p>
+          <div className="reveal reveal-delay-3 flex flex-wrap justify-center gap-3 sm:gap-5">
+            {["Dot HMO", "Novo Health Africa", "Oceanic Health", "IHMS HMO", "NEM Health", "Grooming HMO", "Lifeworth HMO", "Philips HMO", "Quest HMO", "Venus Medicare", "Abuad HMO", "Inchbay HMO", "VEO HMO"].map((p) => (
+              <span key={p} className="text-sm sm:text-base font-medium text-muted-foreground/80 hover:text-primary transition-colors duration-300 px-3 py-1.5 rounded-lg hover:bg-background/50">{p}</span>
             ))}
           </div>
         </div>
