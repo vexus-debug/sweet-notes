@@ -403,47 +403,36 @@ const Index = () => {
       </section>
 
       {/* Technology Section */}
-      <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-          <div className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-accent/5 blur-[100px]" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-accent/8 blur-[80px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-primary-foreground/[0.03]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-primary-foreground/[0.04]" />
-        </div>
-
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-accent/10 blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto relative">
-          <div className="flex items-center gap-3 mb-6 reveal">
-            <div className="h-px w-10 bg-accent/60" />
-            <p className="text-xs font-semibold tracking-[0.3em] text-accent uppercase">Technology</p>
-          </div>
-          <h2 className="reveal reveal-delay-1 text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-            Advanced Eye<br />
-            <span className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text text-transparent">Technology</span>
+          <p className="reveal text-sm font-semibold tracking-widest text-accent uppercase mb-3">Technology</p>
+          <h2 className="reveal reveal-delay-1 text-3xl sm:text-4xl font-bold mb-4">
+            Advanced Eye{" "}
+            <span className="text-accent">Technology</span>
           </h2>
-          <p className="reveal reveal-delay-2 text-primary-foreground/50 text-base sm:text-lg max-w-xl mb-14 leading-relaxed font-light">
-            Cutting-edge ophthalmic equipment for precise diagnosis, comfortable treatment, and better outcomes.
+          <p className="reveal reveal-delay-2 text-primary-foreground/70 text-lg max-w-2xl mb-10 leading-relaxed">
+            We use cutting-edge ophthalmic technology to improve accuracy, comfort, and treatment outcomes. Our investment in modern equipment means better results and more comfortable experiences for you.
           </p>
 
-          <div className="reveal reveal-delay-3 grid sm:grid-cols-3 gap-px bg-primary-foreground/[0.06] rounded-2xl overflow-hidden mb-10">
+          <div className="reveal reveal-delay-3 grid sm:grid-cols-3 gap-4 mb-8">
             {[
-              { title: "Digital Retinal Imaging", desc: "High-resolution imaging for precise diagnosis", num: "01" },
-              { title: "Automated Refraction", desc: "Fast, accurate vision prescriptions", num: "02" },
-              { title: "Advanced Tonometry", desc: "Comfortable glaucoma screening", num: "03" },
-            ].map((tech) => (
-              <div key={tech.title} className="bg-primary p-6 sm:p-8 hover:bg-primary-foreground/[0.03] transition-all duration-500 group cursor-default">
-                <span className="text-[10px] font-mono text-accent/60 tracking-widest mb-4 block">{tech.num}</span>
-                <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center mb-5 group-hover:border-accent/50 group-hover:bg-accent/10 transition-all duration-500">
-                  <Eye className="h-4 w-4 text-accent/70 group-hover:text-accent transition-colors duration-500" />
+              { title: "Digital Retinal Imaging", desc: "High-resolution imaging for precise diagnosis" },
+              { title: "Automated Refraction", desc: "Fast, accurate vision prescriptions" },
+              { title: "Advanced Tonometry", desc: "Comfortable glaucoma screening" },
+            ].map((tech, i) => (
+              <div key={tech.title} className="bg-primary-foreground/5 backdrop-blur-sm rounded-xl p-5 border border-primary-foreground/10 hover:bg-primary-foreground/10 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <Eye className="h-4 w-4 text-accent" />
                 </div>
-                <h4 className="font-semibold text-lg mb-2 tracking-tight">{tech.title}</h4>
-                <p className="text-sm text-primary-foreground/40 leading-relaxed font-light">{tech.desc}</p>
+                <h4 className="font-bold mb-1">{tech.title}</h4>
+                <p className="text-sm text-primary-foreground/60">{tech.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="reveal reveal-delay-4 rounded-2xl overflow-hidden ring-1 ring-primary-foreground/[0.08]">
-            <img src={clinicExterior} alt="Yorlad Specialist Eye Clinic" className="w-full object-cover max-h-[28rem] hover:scale-105 transition-transform duration-1000 ease-out" />
+          <div className="reveal reveal-delay-4 rounded-2xl overflow-hidden shadow-2xl shadow-black/20">
+            <img src={clinicExterior} alt="Yorlad Specialist Eye Clinic" className="w-full object-cover max-h-96 hover:scale-105 transition-transform duration-700" />
           </div>
         </div>
       </section>
