@@ -49,7 +49,7 @@ const whyChooseUs = [
   { icon: Eye, title: "Advanced Equipment", description: "State-of-the-art ophthalmic diagnostic and treatment equipment for precise care." },
   { icon: Heart, title: "Patient Comfort", description: "A warm, welcoming environment designed around your comfort and convenience." },
   { icon: Users, title: "Expert Specialists", description: "Highly trained ophthalmologists and optometrists with years of experience." },
-  { icon: Shield, title: "HMO Accepted", description: "Partners with Leadway Health, Reliance Health, Clearline HMO, and Novo Health." },
+  { icon: Shield, title: "HMO Accepted", description: "Partners with Leadway Health, Reliance Health, AXA Mansard, THT HMO, and 15+ other HMOs." },
 ];
 
 const testimonials = [
