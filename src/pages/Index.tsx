@@ -236,7 +236,7 @@ const Index = () => {
             <div className="reveal reveal-delay-4 mt-12 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg">
               {[
                 { value: "5", icon: Star, label: "Google Rating", accent: true },
-                { value: "4+", icon: Heart, label: "HMO Partners", accent: false },
+                { value: "20+", icon: Heart, label: "HMO Partners", accent: false },
                 { value: "10+", icon: Users, label: "Specialists", accent: false },
               ].map((stat, i) => (
                 <div key={stat.label} className={`relative group rounded-2xl p-4 sm:p-5 text-center transition-all duration-500 hover:-translate-y-1 ${stat.accent ? "bg-gradient-to-br from-primary to-primary/85 text-primary-foreground shadow-lg shadow-primary/25" : "glass-card hover:shadow-lg hover:shadow-primary/10"}`}>
