@@ -49,7 +49,7 @@ const whyChooseUs = [
   { icon: Eye, title: "Advanced Equipment", description: "State-of-the-art ophthalmic diagnostic and treatment equipment for precise care." },
   { icon: Heart, title: "Patient Comfort", description: "A warm, welcoming environment designed around your comfort and convenience." },
   { icon: Users, title: "Expert Specialists", description: "Highly trained ophthalmologists and optometrists with years of experience." },
-  { icon: Shield, title: "HMO Accepted", description: "Partners with Leadway Health, Reliance Health, Clearline HMO, and Novo Health." },
+  { icon: Shield, title: "HMO Accepted", description: "Partners with Leadway Health, Reliance Health, AXA Mansard, THT HMO, and 15+ other HMOs." },
 ];
 
 const testimonials = [
@@ -236,7 +236,7 @@ const Index = () => {
             <div className="reveal reveal-delay-4 mt-12 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-4 max-w-lg">
               {[
                 { value: "5", icon: Star, label: "Google Rating", accent: true },
-                { value: "4+", icon: Heart, label: "HMO Partners", accent: false },
+                { value: "20+", icon: Heart, label: "HMO Partners", accent: false },
                 { value: "10+", icon: Users, label: "Specialists", accent: false },
               ].map((stat, i) => (
                 <div key={stat.label} className={`relative group rounded-2xl p-4 sm:p-5 text-center transition-all duration-500 hover:-translate-y-1 ${stat.accent ? "bg-gradient-to-br from-primary to-primary/85 text-primary-foreground shadow-lg shadow-primary/25" : "glass-card hover:shadow-lg hover:shadow-primary/10"}`}>
@@ -510,12 +510,18 @@ const Index = () => {
       </section>
 
       {/* HMO Partners */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/[0.08] via-accent/[0.06] to-primary/[0.08]">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/[0.08] via-accent/[0.06] to-primary/[0.08]">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="reveal text-sm font-semibold tracking-widest text-accent uppercase mb-6">HMO Partners</p>
-          <div className="reveal reveal-delay-1 flex flex-wrap justify-center gap-6 sm:gap-10">
-            {["Leadway Health", "Reliance Health", "Clearline HMO", "Novo Health"].map((p) => (
-              <span key={p} className="text-lg font-medium text-muted-foreground/80 hover:text-primary transition-colors duration-300 px-4 py-2 rounded-xl hover:bg-background/50">{p}</span>
+          <p className="reveal text-sm font-semibold tracking-widest text-accent uppercase mb-6">Primary HMO Partners</p>
+          <div className="reveal reveal-delay-1 flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
+            {["Leadway Health", "Reliance Health", "AXA Mansard", "Bastion Health", "Clearline HMO", "THT HMO"].map((p) => (
+              <span key={p} className="text-base sm:text-lg font-semibold text-foreground/90 hover:text-primary transition-colors duration-300 px-4 py-2 rounded-xl hover:bg-background/50 border border-border/40">{p}</span>
+            ))}
+          </div>
+          <p className="reveal reveal-delay-2 text-sm font-semibold tracking-widest text-accent uppercase mb-6">Other Accepted HMOs</p>
+          <div className="reveal reveal-delay-3 flex flex-wrap justify-center gap-3 sm:gap-5">
+            {["Dot HMO", "Novo Health Africa", "Oceanic Health", "IHMS HMO", "NEM Health", "Grooming HMO", "Lifeworth HMO", "Philips HMO", "Quest HMO", "Venus Medicare", "Abuad HMO", "Inchbay HMO", "VEO HMO"].map((p) => (
+              <span key={p} className="text-sm sm:text-base font-medium text-muted-foreground/80 hover:text-primary transition-colors duration-300 px-3 py-1.5 rounded-lg hover:bg-background/50">{p}</span>
             ))}
           </div>
         </div>
